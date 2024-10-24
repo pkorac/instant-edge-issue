@@ -2,6 +2,8 @@
 
 Super simple Nuxt 3 app to demonstrate the issue with running Nuxt+InstantDB on edge – i.e. Cloudflare Pages.
 
+Simple Query can be found in `/server/api/mydogs.ts` – it's a simple query that returns a list of dogs.
+Page fetching the data is in `/app.vue` – it's a simple page that fetches the data and displays it.
 
 ## Assumption on what's causing the issue
 
