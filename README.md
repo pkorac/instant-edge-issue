@@ -1,6 +1,20 @@
-# Nuxt Minimal Starter
+# InstantDB Edge Issue
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Super simple Nuxt 3 app to demonstrate the issue with running Nuxt+InstantDB on edge – i.e. Cloudflare Pages.
+
+
+## Assumption on what's causing the issue
+
+One of the modules/libraries that InstantDB uses must work only in full node-js environment – i.e. isn't compatible with CF Workers environment. My guess is it would be the same on Vercel Edge.
+
+This is the error:
+```
+"message": [
+	"[nuxt] [request error] [unhandled] [500]",
+	"[unenv] crypto.getHashes is not implemented yet!\n  at createNotImplementedError (chunks/routes/api/mydogs.mjs:1:783)  \n  at Object.getHashes (chunks/routes/api/mydogs.mjs:1:1073)  \n  at chunks/routes/api/mydogs.mjs:1:8546  \n  at chunks/routes/api/mydogs.mjs:1:14719"
+],
+```
+
 
 ## Setup
 
@@ -56,20 +70,3 @@ yarn build
 bun run build
 ```
 
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

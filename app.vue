@@ -2,6 +2,7 @@
 	<div>
 		<h1>Hello world!</h1>
 		<pre>{{ myDogs }}</pre>
+		<p>There should be some data above here 👆</p>
 	</div>
 </template>
 <script setup lang="ts">
@@ -19,5 +20,13 @@ body {
 		"Open Sans",
 		"Helvetica Neue",
 		sans-serif;
+}
+
+pre {
+	background: #222;
+	min-height: 50px;
+	min-width: 100px;
+	border-radius: 12px;
+	padding: 12px;
 }
 </style>
