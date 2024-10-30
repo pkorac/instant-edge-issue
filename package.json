@@ -1,22 +1,23 @@
 {
-  "name": "nuxt-app",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "dependencies": {
-    "@instantdb/admin": "^0.14.19",
-    "@instantdb/core": "^0.14.19",
-    "nuxt": "^3.13.2",
-    "vue": "latest",
-    "vue-router": "latest"
-  },
-  "devDependencies": {
-    "prettier": "3.3.3"
-  }
+	"name": "instantdb-nuxt-app",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "NITRO_PRESET=vercel-edge nuxt build",
+		"dev": "nuxt dev",
+		"generate": "nuxt generate",
+		"preview": "nuxt preview",
+		"postinstall": "nuxt prepare"
+	},
+	"dependencies": {
+		"@instantdb/admin": "^0.14.19",
+		"@instantdb/core": "^0.14.19",
+		"nuxt": "^3.13.2",
+		"vue": "latest",
+		"vue-router": "latest"
+	},
+	"devDependencies": {
+		"prettier": "3.3.3",
+		"wrangler": "^3.83.0"
+	}
 }
