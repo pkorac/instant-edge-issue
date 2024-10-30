@@ -17,6 +17,7 @@
 		"vue-router": "latest"
 	},
 	"devDependencies": {
-		"prettier": "3.3.3"
+		"prettier": "3.3.3",
+		"wrangler": "^3.83.0"
 	}
 }
