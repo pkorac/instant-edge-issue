@@ -3,6 +3,7 @@
 		<h1>Hello world!</h1>
 		<pre>{{ myDogs }}</pre>
 		<p>There should be some data above here 👆</p>
+		<p>Toml with nodejs compat updated.</p>
 	</div>
 </template>
 <script setup lang="ts">
